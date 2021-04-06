@@ -19,6 +19,7 @@
   --fs-10: 0.625rem;
   --fs-12: 0.75rem;
   --fs-14: 0.875rem;
+  --fs-15: 0.938rem;
   --fs-16: 1rem;
   --fs-18: 1.125rem;
   --fs-20: 1.25rem;
@@ -46,7 +47,7 @@ body {
   background-color: var(--clr-light-gray);
   color: var(--clr-white);
   font-family: var(--ff-karla);
-  font-size: var(--fs-16);
+  font-size: var(--fs-14);
   font-weight: var(--fw-regular);
   margin: 0;
   text-align: left;
@@ -55,17 +56,14 @@ body {
 /* Typography */
 
 .title {
-  font-size: var(--fs-24);
-  font-weight: var(--fw-bold);
-}
-
-.title__upper {
   color: var(--clr-cyan);
+  font-size: var(--fs-20);
+  font-weight: var(--fw-bold);
 }
 
 .subtitle {
   color: var(--clr-bright-yellow);
-  font-size: var(--fs-18);
+  font-size: var(--fs-15);
   font-weight: var(--fw-bold);
 }
 
@@ -74,32 +72,38 @@ body {
   line-height: 1.8;
 }
 
-.mp-cost {
-  color: var(--clr-white);
+.section-header {
   font-size: var(--fs-18);
-  opacity: 0.5;
 }
 
 .amount {
-  font-size: var(--fs-36);
+  font-size: var(--fs-32);
   font-weight: var(--fw-bold);
+}
+
+.mp-cost {
+  color: var(--clr-white);
+  font-size: var(--fs-16);
+
+  opacity: 0.5;
 }
 
 .mp-description {
   color: var(--clr-white);
-  font-size: var(--fs-18);
+  font-size: var(--fs-16);
   font-weight: var(--fw-regular);
+  opacity: 0.8;
 }
 
 .cta-btn {
   color: var(--clr-white);
-  font-size: var(--fs-18);
+  font-size: var(--fs-14);
   font-weight: var(--fw-bold);
 }
 
 .reasons {
   line-height: 1.5;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 /* Utility styles */
@@ -111,18 +115,27 @@ body {
   align-items: center;
 
   height: 100%;
-  margin: 0 auto;
+  margin: 4em auto;
   max-width: 374px;
 }
 
 /* SECTIONS */
 .card {
-  border-radius: 0.5em;
   margin: 0em 1.5em;
 }
 
 .upper-card {
   background-color: var(--clr-white);
+  border-radius: 0.5em 0.5em 0 0;
+  padding: 1.75em 1.6em;
+}
+
+.title {
+  margin-bottom: 0.85em;
+}
+
+.subtitle {
+  margin-bottom: 0.75em;
 }
 
 .lower-card {
@@ -130,12 +143,56 @@ body {
 
 .lower-card--a {
   background-color: var(--clr-cyan);
+  padding: 1.75em 1.6em;
 }
+
+.section-header {
+  margin-bottom: 0.85em;
+}
+
+.monthly-plan {
+  position: relative;
+}
+
+.mp-cost {
+  position: absolute;
+  left: 25%;
+  bottom: 57%;
+}
+
+.mp-description {
+  margin: 0.5em 0;
+}
+
+.cta-btn {
+  background-color: var(--clr-bright-yellow);
+  border: none;
+  border-radius: 0.25em;
+  box-shadow: 3px 7px 10px hsla(0, 1%, 30%, 0.3);
+  margin-top: 1.25em;
+  padding: 1em 0;
+  width: 100%;
+}
+
+.cta-btn:hover,
+.cta-btn:active {
+  box-shadow: 3px 7px 10px 5px hsla(0, 1%, 30%, 0.3);
+  opacity: 0.9;
+}
+
 .lower-card--b {
   background-color: var(--clr-light-cyan);
+  border-radius: 0em 0em 0.5em 0.5em;
+
+  padding: 1.75em 1.6em;
 }
 
 /* FOOTER */
+
+.footer {
+  color: var(--clr-grayish-blue);
+  padding: 0.5em 0;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
